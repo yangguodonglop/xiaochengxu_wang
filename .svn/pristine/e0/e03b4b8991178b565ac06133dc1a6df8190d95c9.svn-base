@@ -1,0 +1,92 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "wxa06ad472edceb9d2",
+	"projectname": "%E6%AC%A3%E6%97%85%E5%A4%A9%E4%B8%8B",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": 0,
+					"name": "首页",
+					"pathName": "pages/index/home",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "获取周边酒店",
+					"pathName": "pages/hotel/get_hotel",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "积分商城",
+					"pathName": "pages/integral/index/index",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "目的地",
+					"pathName": "pages/destination/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "地址",
+					"pathName": "pages/address/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "添加地址",
+					"pathName": "pages/address/create/create",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/customer/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/auth/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/auth/register/register",
+					"query": ""
+				}
+			]
+		}
+	}
+}

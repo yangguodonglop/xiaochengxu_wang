@@ -1,0 +1,49 @@
+<view id="app">
+  <view class="mui-content">
+    <view id="slider" class="mui-slider mui-fullscreen">
+      <view id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+        <view class="mui-scroll">
+          <a class="mui-control-item {{currentTabsIndex==index?'mui-active':''}}" wx:key="unique" bindtap="switchtab" wx:for="{{switchs}}" data-index="{{index}}">
+            {{item}}
+          </a>
+
+
+        </view>
+      </view>
+      <view class="mui-slider-group" id="nowclick">
+        <view class="mui-slider-item mui-control-content mui-active">
+          <view id="scroll1" class="mui-scroll-wrapper">
+            <view class="mui-scroll">
+              <view class="my_order_new">
+                <ul class="mui-table-view">
+                  <li>
+                    <p class="item_p1">
+                      <span class="item_span1">订单编号：11</span>
+                      <span class="item_span2">未支付</span>
+                    </p>
+                    <p class="item_p2">
+
+                      <span class="item_span1">
+                        <image src="http://m.tuniucdn.com/filebroker/cdn/online/80/a9/80a9c5f6_w500_h280_c1_t0.jpg" />
+                      </span>
+                      <span class="item_span2">
+                        <i class="item_i1" style=" display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2; overflow: hidden;">&lt;日本东京著名景点一日游&gt;东京往返，中文导游，一人发团，游浅草寺，吃日式烤肉，坐东京游船，登东京塔</i>
+                        <i class="item_i2">出行日期2018-05-14</i>
+                        <i class="item_i3">总价:
+                          <b>645.00</b>
+                        </i>
+                      </span>
+                    </p>
+                  </li>
+ 
+
+                </ul>
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

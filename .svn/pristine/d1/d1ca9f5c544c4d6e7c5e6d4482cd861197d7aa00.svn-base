@@ -1,0 +1,14 @@
+/* pages/search/search.wxss */
+.rads{background-color: rebeccapurple}
+
+.ts_18{font-size: 36rpx;}
+.ts_14{font-size: 28rpx;}
+.ts_12{font-size: 24rpx;}
+.ts_11{font-size: 22rpx;}
+.wx_iocn1{width: 14rpx; height: 10rpx; margin-left: 10rpx; margin-bottom: 5rpx;}
+.wx_iocn2{width: 40rpx; height: 40rpx;}
+.wx_iocn3{width: 160rpx; height: 160rpx;}
+.pad_20{padding-left: 40rpx; padding-right: 40rpx;}
+.pad_l_260{padding-left: 260rpx;}
+.image22{width: 35rpx; height: 25rpx;}
+.image23{width: 0px; height: 0px;}

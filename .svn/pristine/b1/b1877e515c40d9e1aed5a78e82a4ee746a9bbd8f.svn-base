@@ -1,0 +1,225 @@
+// pages/order/list/list.js
+var app = getApp();
+
+
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    urls: app.data.URLS,
+    action: false,
+    isshow:false,
+    datetime: '日期选择',
+    num:0 ,
+    price:0,
+    price_order: 2599,
+    name: '出游人姓名',
+    phone: '您的电话号码',
+    contents: '填写内容',
+
+
+
+  },
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      datetime: e.detail.value
+    })
+  },
+  bindKeyInput: function (e) {
+    this.setData({
+      inputValue: e.detail.value
+    })
+  },
+
+  onLoad: function (options) {
+    wx.setNavigationBarTitle({
+      title: '订单填写'
+    });
+  },
+  set: function (e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
+  toggle: function (e) {
+    var that = this;
+    var togglenow = this.data.isshow
+    if (togglenow == false) {
+      this.setData({ isshow: true })
+    }
+    if (togglenow == true) {
+      this.setData({ isshow: false })
+    }
+  },
+  bindChange: function (e) {
+    const val = e.detail.value
+    this.setData({
+      year: this.data.years[val[0]],
+      month: this.data.months[val[1]],
+      day: this.data.days[val[2]]
+    })
+  },
+
+  but_del: function () {
+    console.log(this.data.num)
+    //let _this=this
+    this.data.num--;
+    this.data.price = this.data.price_order * this.data.num;
+    if (this.data.num < 0) {
+      this.data.num = 0;
+      this.data.price = 0;
+    }
+    this.setData({
+      num: this.data.num,
+      price: this.data.price
+    })
+  },
+  but_add: function () {
+    console.log(this.data.num)
+    //let _this=this
+    this.data.num--;
+    this.data.price = this.data.price_order * this.data.num;
+    if (this.data.num < 0) {
+      this.data.num = 0;
+      this.data.price = 0;
+    }
+    this.setData({
+      num: this.data.num,
+      price: this.data.price
+    })
+  },
+  but_add: function () {
+    console.log(this.data.num)
+    //let _this=this
+    this.data.num++;
+    this.data.price = this.data.price_order * this.data.num;
+    this.setData({
+      num: this.data.num,
+      price: this.data.price
+    })
+  },
+  getname: function (e) {
+    console.log(e.detail.value)
+    var val = e.detail.value;
+    this.setData({
+      name: val
+    });
+  },  
+  getphone: function (e) {
+    console.log(e.detail.value)
+    var val = e.detail.value;
+    this.setData({
+      phone: val
+    });
+  }, 
+  getcontents: function (e) {
+    console.log(e.detail.value)
+    var val = e.detail.value;
+    this.setData({
+      contents: val
+    });
+  }, 
+  linkUrl: function () {
+    console.log(this.data.datetime)
+    var reg = 11 && /^((13|14|15|17|18)[0-9]{1}\d{8})$/;
+    if (this.data.datetime == '日期选择') {
+      wx.showModal({
+        content: '请选择出行日期',
+       
+      })  
+      return
+    }
+    if (this.data.num < 0) {
+      wx.showModal({
+        content: '请填写正确数量',
+
+      }) 
+      return
+    }
+    if (this.data.name == '') {
+      wx.showModal({
+        content: '请输入出游人姓名',
+
+      })      
+       return
+    };
+    if (this.data.phone == '') {
+      wx.showModal({
+        content: '手机号码必须填写',
+
+      })   
+      return
+    } else if (!reg.test(this.data.phone)) {
+      wx.showModal({
+        content: '手机号码填写错误',
+
+      })   
+      return
+    };
+    if (this.data.isshow == false) {
+      wx.showModal({
+        content: '请仔细阅读条款',
+
+      })   
+      return
+    }
+    wx.navigateTo({
+       url: '/pages/order/payment/payment'
+    });
+    
+  },
+
+
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+
+})

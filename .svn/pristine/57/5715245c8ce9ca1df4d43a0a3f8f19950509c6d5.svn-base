@@ -1,0 +1,82 @@
+<scroll-view scroll-y bindscroll="scroll" >
+	<!--积分  兑换记录-->
+	<view class="row h_44 b_w ts_12">
+		<view class="wid_49 cen jf_tit_link">
+			<image class="image2 mar_r_5" src="images/money.png"/>
+			积分<span class="txt_c1 pad_l_5">0</span>
+		</view>
+		<view class="wid_49 cen">
+			<image class="image2 mar_r_5" src="images/money_dh.png"/>
+			兑换记录
+		</view>
+	</view>
+	
+	<!--精品  热门兑换-->
+	<view class="b_w mar_t_10 pad_b_10">
+		<image class="image7 mar_10" src="images/jp_rmdh.png"/>
+		<view class="row mar_l_10 mar_r_10">
+			<image class="wid_31" src="images/image_12.png"/>
+			<image class="wid_31" src="images/image_13.png"/>
+			<image class="wid_31" src="images/image_14.png"/>
+		</view>
+	</view>
+	
+	<!--商品-->
+	<view class="b_w mar_t_10">
+		<view class="rel">
+			<image class="abs image8 iocn1" src="images/more.png"/>
+			<image class="widths pad_10" src="images/image_15.png"/>
+		</view>
+		<view class="row mar_t_-15 ts_10 lin_hei_12">
+			<view class="col2 mar_10">
+				<image class="widths" src="images/image_17.jpg"/>
+				<span class="mar_t_5">全网通四核10.1英寸GPS导航...</span>
+				<span class="mar_t_5 txt_c1">2000积分</span>
+			</view>
+			<view class="col2 mar_10">
+				<image class="widths" src="images/image_18.jpg"/>
+				<span class="mar_t_5">全网通四核10.1英寸GPS导航...</span>
+				<span class="mar_t_5 txt_c1">2000积分</span>
+			</view>
+			<view class="col2 mar_10">
+				<image class="widths" src="images/image_19.jpg"/>
+				<span class="mar_t_5">全网通四核10.1英寸GPS导航...</span>
+				<span class="mar_t_5 txt_c1">2000积分</span>
+			</view>
+			<view class="col2 mar_10">
+				<image class="widths" src="images/image_20.jpg"/>
+				<span class="mar_t_5">全网通四核10.1英...</span>
+				<span class="mar_t_5 txt_c1">2000积分</span>
+			</view>
+		</view>
+	</view>
+	
+	<view class="b_w mar_t_10">
+		<view class="rel">
+			<image class="abs image8 iocn1" src="images/more.png"/>
+			<image class="widths pad_10" src="images/image_15.png"/>
+		</view>
+		<view class="row mar_t_-15 ts_10 lin_hei_12">
+			<view class="col2 mar_10">
+				<image class="widths" src="images/image_17.jpg"/>
+				<span class="mar_t_5">全网通四核10.1英寸GPS导航...</span>
+				<span class="mar_t_5 txt_c1">2000积分</span>
+			</view>
+			<view class="col2 mar_10">
+				<image class="widths" src="images/image_18.jpg"/>
+				<span class="mar_t_5">全网通四核10.1英寸GPS导航...</span>
+				<span class="mar_t_5 txt_c1">2000积分</span> 
+			</view>
+			<view class="col2 mar_10">
+				<image class="widths" src="images/image_19.jpg"/>
+				<span class="mar_t_5">全网通四核10.1英寸GPS导航...</span>
+				<span class="mar_t_5 txt_c1">2000积分</span>
+			</view>
+			<view class="col2 mar_10">
+				<image class="widths" src="images/image_20.jpg"/>
+				<span class="mar_t_5">全网通四核10.1英...</span>
+				<span class="mar_t_5 txt_c1">2000积分</span>
+			</view>
+		</view>
+	</view>
+</scroll-view>

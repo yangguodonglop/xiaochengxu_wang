@@ -1,0 +1,5 @@
+@import '/assets/css/personal_set.wxss';
+
+.input_hide{
+display: none
+}

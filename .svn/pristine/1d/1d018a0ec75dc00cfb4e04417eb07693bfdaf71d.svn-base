@@ -1,0 +1,264 @@
+// pages/order/list/list.js
+var app = getApp();
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    urls: app.data.URLS,
+    switchs: [
+      '全部订单',
+      '待付款',
+      '进行中',
+      '已完成'
+
+    ],
+    currentTabsIndex: 0,
+    dataList: [],
+    dataList1: [],
+    nowstr: 1,
+    isChecked: true,
+    isChecked1: true 
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    wx.setNavigationBarTitle({
+      title: '我的订单'
+    });
+    var that = this;
+    app.request(this.data.urls + '/orderList' + '?type=' + that.data.nowstr, 'get').then((res) => {
+      switch (that.data.nowstr) {
+        case 1:
+          that.dataList = res.data
+          for (var i = 0; i < res.data.length; i++) {
+            if (that.dataList[i].status == 1) {
+              that.dataList[i].status = "立即预购"
+            } else {
+              that.dataList[i].status = "重新预购"
+            }
+          }
+          that.setData({
+            dataList: res.data,
+            isChecked: false,
+            isChecked1: false
+          });
+          break;
+        case 2:
+          that.dataList = res.data
+          for (var i = 0; i < res.data.length; i++) {
+            if (that.dataList[i].status == 1) {
+              that.dataList[i].status = "立即预购"
+            } else {
+              that.dataList[i].status = "重新预购"
+            }
+          }
+          that.setData({
+            dataList: res.data,
+            isChecked: true,
+            isChecked1: true
+          });
+          break;
+        case 3:
+     
+          that.dataList = res.data
+          
+          console.log(res+"******")
+          for (var i = 0; i < res.data.length; i++) {
+            if (that.dataList[i].status == 2) {
+              that.dataList[i].status = "申请退款"
+            }
+          }
+          that.setData({
+            dataList: res.data,
+            isChecked1: true,
+            isChecked: false
+
+          });
+          break;
+        case 4:
+        
+          that.dataList = res.data.order_refunds
+          that.dataList = res.data.order_end
+          that.setData({
+            dataList: res.data.order_refunds,
+            dataList1: res.data.order_end,
+            isChecked: false,
+            isChecked1: false
+          });
+          break;
+      }
+
+
+      // console.log(that.dataList)
+
+      wx.hideLoading();
+    }).catch((errMsg) => {
+      console.log(errMsg);//错误提示信息
+      wx.hideLoading();
+    });
+  },
+  getData: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  switchtab: function (e) {
+    //获取索引，改变选中样式
+
+
+    var that = this;
+    var index = e.currentTarget.dataset['index'];
+    var nowindex = index + 1
+    //匹配选中菜单，获取数据
+    switch (nowindex) {
+      case 1:
+        this.setData({
+          currentTabsIndex: index
+        })
+        break;
+      case 2:
+        console.log(nowindex)
+        this.setData({
+          currentTabsIndex: index
+        })
+        break;
+      case 3:
+        this.setData({
+          currentTabsIndex: index
+        })
+        break;
+      case 4:
+        this.setData({
+          currentTabsIndex: index
+        })
+        break;
+    }
+    var nowtype = that.data.currentTabsIndex + 1
+    app.request(this.data.urls + '/orderList' + '?type=' + nowtype, 'get').then((res) => {
+      switch (nowtype) {
+        case 1:
+          that.dataList = res.data
+          for (var i = 0; i < res.data.length; i++) {
+            if (that.dataList[i].status == 1) {
+              that.dataList[i].status = "立即预购"
+            } else {
+              that.dataList[i].status = "重新预购"
+            }
+          }
+          that.setData({
+            dataList: res.data,
+            isChecked: false,
+            isChecked1: false
+          });
+          break;
+        case 2:
+          that.dataList = res.data
+          for (var i = 0; i < res.data.length; i++) {
+            if (that.dataList[i].status == 1) {
+              that.dataList[i].status = "立即预购"
+            } else {
+              that.dataList[i].status = "重新预购"
+            }
+          }
+          that.setData({
+            dataList: res.data,
+            isChecked: true,
+            isChecked1: true
+          });
+          break;
+        case 3:
+          console.log(res)
+          that.dataList = res.data
+
+          for (var i = 0; i < res.data.length; i++) {
+            if (that.dataList[i].status == 2) {
+              that.dataList[i].status = "申请退款"
+            }
+          }
+          that.setData({
+            dataList: res.data,
+            isChecked1: true,
+            isChecked: false
+
+          });
+          break;
+        case 4:
+          that.dataList = res.data.order_refunds
+          that.dataList = res.data.order_end
+          that.setData({
+            dataList: res.data.order_refunds,
+            dataList1: res.data.order_end,
+            isChecked: false,
+            isChecked1: false
+          });
+          break;
+      }
+
+
+      // console.log(that.dataList)
+
+      wx.hideLoading();
+    }).catch((errMsg) => {
+      console.log(errMsg);//错误提示信息
+      wx.hideLoading();
+    }); 
+ 
+
+
+
+
+  }
+
+})

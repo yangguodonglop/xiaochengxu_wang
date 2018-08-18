@@ -1,0 +1,7 @@
+.mui-content {
+    background-color: #efeff4;
+    -webkit-overflow-scrolling: touch;
+}
+page{
+      background-color: #F7F7F7;
+}

@@ -1,0 +1,51 @@
+<view id="app">
+
+    <view class="mui-content">
+        <view id="slider" class="mui-slider mui-fullscreen">
+            <view id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                <view class="mui-scroll">
+                    <a class="mui-control-item mui-active"  href="#item1mobile">
+                        全部订单
+                    </a>
+                    <a class="mui-control-item mui-control-item11" href="#item2mobile">
+                        待付款
+                    </a>
+                    <a class="mui-control-item mui-control-item11" href="#item3mobile">
+                        进行中
+                    </a>
+                    <a class="mui-control-item mui-control-item11" href="#item4mobile">
+                        已完成
+                    </a>
+
+                </view>
+            </view>
+            <view class="mui-slider-group" id="nowclick">
+                <view class="mui-slider-item mui-control-content mui-active">
+                    <view id="scroll1" class="mui-scroll-wrapper">
+                        <view class="mui-scroll">
+                            <view class="my_order_new">
+                                <ul class="mui-table-view">
+                                    <li>
+                                        <p class="item_p1"><span class="item_span1">订单编号：11</span><span class="item_span2">222</span></p>
+                                        <p class="item_p2" >
+                                            <a href="#">
+                                                <span class="item_span1"><image :src="" /></span>
+                                                <span class="item_span2">
+														<i class="item_i1" style=" display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2; overflow: hidden;">2111</i>
+														<i class="item_i2">出行日期2322</i>
+														<i class="item_i3">总价:<b>444</b></i>
+													</span>
+                                            </a>
+                                        </p>
+                                    </li>
+
+                                </ul>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+
+            </view>
+        </view>
+    </view>
+</view>

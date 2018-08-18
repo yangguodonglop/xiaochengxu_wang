@@ -1,0 +1,72 @@
+<!-- <view class='h_44 tit_bor tit_top row6 pad_20'>
+    <image class='wx_iocn1' src='/images/img_31.png'></image>
+</view> -->
+<!--选项一-->
+<view class="h_44 tit_bor row5 ts_14 txt_c2 b_w" style='z-index: 100;'>
+    <span class="tit_action" bindtap="but_action" data-id="1">产品推荐</span>
+    <span class="tit_txt" bindtap="but_action" data-id="2">自由行</span>
+    <span class="tit_txt" bindtap="but_action" data-id="3">跟团游</span>
+    <span class="tit_txt" bindtap="but_action" data-id="4">周边游</span>
+    <span class="tit_txt" bindtap="but_action" data-id="5">景点门票</span>
+</view>
+
+<!--选项二-->
+<view class="h_44 tit_bor row ts_14 txt_c2 b_w pad_20" style='z-index: 100;'>
+    <view class='pad_l_260'>推荐排序
+        <image class='wx_iocn1' src='/images/img_32.png'></image>
+    </view>
+    <view class='fshr'>
+
+        <image class="wx_iocn2" src='/images/img_31.png'></image>
+    </view>
+</view>
+
+
+<!--弹出选项卡-->
+<view class="abs bac_b widths heights" style="bottom: 0;" style='z-index: 0; display: none;'></view>
+<!--推荐排序-->
+<view class="abs widths b_w ts_12 txt_c2 zxb_anim" style="z-index: 100; height: 0px; display: none;">
+    <view class="h_44 back_white row pad_l_10 pad_r_15 tit_bor">
+        <span class="txt_c1">综合排序</span>
+        <image class="image22" src="/images/img_35.png" />
+    </view>
+    <view class="h_44 back_white row pad_l_10 pad_r_15 tit_bor">
+        <span class="">新品推荐</span>
+        <image class="image23" src="/images/img_35.png" />
+    </view>
+    <view class="h_44 back_white row pad_l_10 pad_r_15 tit_bor">
+        <span class="">价格从低到高</span>
+        <image class="image23" src="/images/img_35.png" />
+    </view>
+    <view class="h_44 back_white row pad_l_10 pad_r_15 tit_bor">
+        <span class="">价格从高到低</span>
+        <image class="image23" src="/images/img_35.png" />
+    </view>
+    
+</view>
+
+<!--列表-->
+<!--下拉刷新容器-->
+<view>
+    <view class="ts_14">
+        <view class="h_105 tit_bor row pad_t_5 pad_b_5">
+            <view class="fshr mar_l_13" style="overflow: hidden;">
+                <image class="wx_iocn3" src="/images/img_103.jpg" />
+            </view>
+            <view class="col4 mar_l_13 pad_r_10">
+                <span class="h_38 txt_c7" style="overflow: hidden;">154</span>
+                <view class="row3 ts_10 mar_b_-10">
+                    <span class="iocn5">可订今日</span>
+                    <span class="iocn6">优惠</span>
+                    <span class="iocn7">推荐</span>
+                </view>
+                <view class="row ts_12">
+                    <span class="txt_c4">111</span>
+                    <span class="txt_c1 ts_11">￥
+                        <span class="ts_18">222</span> 起
+                    </span>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

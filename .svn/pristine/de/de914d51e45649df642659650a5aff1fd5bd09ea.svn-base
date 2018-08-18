@@ -1,0 +1,7 @@
+.reds{background-color: red}
+.h_72{height: 72rpx; border-top: 1rpx solid #fef5e5}
+.w_49{width: 49%}
+.iocn1{width: 28rpx; height: 28rpx; margin-top: 12rpx; margin-right: 15rpx;}
+.wx_iocn2{width: 38rpx; height: 44rpx;}
+.ts_10{font-size: 20rpx;}
+.ts_15{font-size: 30rpx;}

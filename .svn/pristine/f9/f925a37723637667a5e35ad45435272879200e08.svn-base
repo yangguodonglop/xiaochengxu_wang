@@ -1,0 +1,5 @@
+@import '/pages/customer/setting/index/index.wxss';
+
+.input_hide{
+display: none
+}
